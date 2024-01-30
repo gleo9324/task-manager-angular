@@ -1,0 +1,10 @@
+<h1 style="margin: 16px;">Task manager</h1>
+
+<div>
+  <button mat-raised-button color="primary" style="margin: 16px;" routerLink="/new-task">Aggiungi Task</button>
+  <button mat-raised-button color="primary" style="margin: 16px;" routerLink="/new-persona">Aggiungi Persona</button>
+</div>
+
+<div class="card-container">
+  <app-card *ngFor="let task of tasks, let i = index" [task]="task" [id]="i"></app-card>
+</div>

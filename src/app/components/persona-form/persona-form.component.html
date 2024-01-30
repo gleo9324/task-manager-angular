@@ -1,0 +1,21 @@
+<h1 style="margin: 16px;">Persona</h1>
+
+<form class="example-form" class="form-container" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Cognome</mat-label>
+    <input matInput formControlName="surename">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" class="submit-button" type="submit" [disabled]="!form.valid">Aggiungi
+    Persona</button>
+</form>
